@@ -8,7 +8,37 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <p>Hi</p>
+  <p>MVCI Character Guide</p>
+  <form action="#" id="dropD">
+      <select name="occasion-dropdown" id="drop" onchange='setOccasion(this)'>
+        <option value="value0" selected>Select a Character</option>
+        <option value="value1">Ultron</option>
+        <option value="value2">Nova</option>
+        <option value="value3"> Dormammu</option>
+        <option value="value4">Dr. Strange</option>
+        <option value="value5">Ghost Rider</option>
+        <option value="value6">Hulk</option>
+      </select>
+      <input type="submit" class="goButton" value="Go >">
+    </form>
+
+    <div class="detail-wrapper">
+      <img class="character-image" src=""></img>
+    <div>
+      <h2 class="description">Moves</h2>
+      <p class="description-content"></p>
+    </div>
+    <div>
+      <h2 class="accessories">Combos</h2>
+      <ul class="accessories-list"></ul>
+    </div>
+    </div>
+  <button class="add">
+    <a href="add.html">Add a Combo</a>
+  </button>
+  <button>
+    <a href="/index.html" class="back">Back</a>
+  </button>
 <script src= "app.js"></script>
 </body>
 </html>
