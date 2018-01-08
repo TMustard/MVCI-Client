@@ -10,7 +10,7 @@
 <body>
   <p>MVCI Character Guide</p>
   <form action="#" id="dropD">
-      <select name="occasion-dropdown" id="drop" onchange='setOccasion(this)'>
+      <select name="occasion-dropdown" id="drop" onchange='setCharacter(this)'>
         <option value="value0" selected>Select a Character</option>
         <option value="value1">Ultron</option>
         <option value="value2">Nova</option>
@@ -23,15 +23,9 @@
     </form>
 
     <div class="detail-wrapper">
-      <img class="character-image" src=""></img>
-    <div>
       <h2 class="description">Moves</h2>
       <p class="description-content"></p>
-    </div>
-    <div>
-      <h2 class="accessories">Combos</h2>
-      <ul class="accessories-list"></ul>
-    </div>
+      <h2 class="combo-list">Combos</h2>
     </div>
   <button class="add">
     <a href="add.html">Add a Combo</a>
