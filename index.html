@@ -21,18 +21,44 @@
       </select>
       <input type="submit" class="goButton" value="Go >">
     </form>
-
     <div class="detail-wrapper">
       <h2 class="description">Moves</h2>
+      <ul class="move-list"></ul>
       <p class="description-content"></p>
-      <h2 class="combo-list">Combos</h2>
+      <h2 class="combos">Combos</h2>
+      <ul class="combo-list"></ul>
     </div>
   <button class="add">
-    <a href="add.html">Add a Combo</a>
+    Add a Combo
   </button>
-  <button>
+  <div class="add-combo-forms">
+    <p><i>This section is under construction</i></p>
+    <form action="#" id="user-inputs" method="POST">
+      <ul class="submit-form">
+        <li>
+          <label>Your Name:</label>
+          <input type="text" id="user-name">
+        </li>
+        <li>
+          <label>Combo:</label>
+          <input type="textarea" id="combo-notation">
+        </li>
+        <li>
+          <label>Combo Description:</label>
+          <input type="textarea" id="combo-description">
+        </li>
+        <li>
+          <label>Youtube Link (optional):</label>
+          <input type="text" id="youtube-link">
+        </li>
+      </ul>
+      <input type="submit" name="" value="submit">
+    </form>
+  </div>
+
+  <!-- <button>
     <a href="/index.html" class="back">Back</a>
-  </button>
+  </button> -->
 <script src= "app.js"></script>
 </body>
 </html>

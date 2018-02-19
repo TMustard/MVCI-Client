@@ -1,41 +1,82 @@
 // const apiURL = "https://fathomless-chamber-33616.herokuapp.com/"
-const apiURL = "http://localhost:8080"
-var characterData;
+const apiURL = "http://localhost:8000";
+var moveData;
+var comboData;
+var characterData = [];
 var characterSelected;
 
-fetch(apiURL)
+fetch(`${apiURL}/moves`)
   .then(response => response.json())
   .then(response => {
-    characterData = response.moves;
-    console.log(characterData);
+    moveData = response.moves;
   });
+
+fetch(`${apiURL}/combos`)
+  .then(response => response.json())
+  .then(response => {
+    comboData = response.combos;
+    for (var i = 0; i < moveData.length; i++) {
+      characterData.push(Object.assign({}, comboData[i], moveData[i]));
+    }
+  });
+console.log(characterData);
+
+(function startPage() {
+  // document.querySelector("body").style.display = "none";
+  alert(
+    "This is an app for players of Marvel vs. Capcom Infinite that shows character moves and combos!"
+  );
+})();
 
 function setCharacter(sel) {
   characterSelected = sel.options[sel.selectedIndex].text;
-  console.log(characterSelected);
   return characterSelected;
 }
 
-document.querySelector("#dropD").addEventListener("submit", function(event){
+document.querySelector("#dropD").addEventListener("submit", function(event) {
   event.preventDefault();
-  populateDescription();
+  renderData();
 });
 
-
-// function populateDescription() {
-//     // var descriptionP = document.querySelector('.description-content')
-//     if( === characterSelected) {
-//         console.log('hi')
-//     }
-// }
-function populateDescription() {
-  var descriptionP = document.querySelector(".description-content");
-  console.log(characterData);
+function renderData() {
+  var moveList = document.querySelector(".move-list");
+  var comboList = document.querySelector(".combo-list");
+  if ((document.querySelector(".add-combo-forms").style.display = "inline")) {
+    document.querySelector(".add-combo-forms").style.display = "none";
+  }
+  while (moveList.firstChild) {
+    moveList.removeChild(moveList.firstChild);
+  }
+  while (comboList.firstChild) {
+    comboList.removeChild(comboList.firstChild);
+  }
   characterData.map(item => {
-    console.log(item)
     if (item.name === characterSelected) {
-      var moveList = item.move1;
-      descriptionP.innerHTML = moveList;
+      for (var i = 0; i < item.moves.length; i++) {
+        var newLI = document.createElement("li");
+        newLI.innerText = item.moves[i];
+        moveList.appendChild(newLI);
+      }
+      for (var j = 0; j < item.combos.length; j++) {
+        var newerLI = document.createElement("li");
+        newerLI.innerText = item.combos[j];
+        comboList.appendChild(newerLI);
+      }
     }
   });
 }
+
+document.querySelector(".add-combo-forms").style.display = "none";
+
+const addButton = document.querySelector(".add");
+addButton.addEventListener("click", function() {
+  document.querySelector(".add-combo-forms").style.display = "inline";
+});
+
+// document.querySelector("#user-inputs").addEventListener("submit", function(event){
+//   event.preventDefault();
+//   const messageData = new FormData(event.target);
+//   const objectToSend = {
+//     "Submitted by:"
+//
+// })
