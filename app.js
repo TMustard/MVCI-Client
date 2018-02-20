@@ -1,5 +1,5 @@
-// const apiURL = "https://fathomless-chamber-33616.herokuapp.com/"
-const apiURL = "http://localhost:8000";
+const apiURL = "https://fathomless-chamber-33616.herokuapp.com/";
+// const apiURL = "http://localhost:8000";
 var moveData;
 var comboData;
 var characterData = [];
