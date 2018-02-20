@@ -19,21 +19,20 @@ fetch(`${apiURL}/combos`)
       characterData.push(Object.assign({}, comboData[i], moveData[i]));
     }
   });
-console.log(characterData);
 
-(function startPage() {
-  // document.querySelector("body").style.display = "none";
-  alert(
-    "This is an app for players of Marvel vs. Capcom Infinite that shows character moves and combos!"
-  );
-})();
+// (function startPage() {
+//   // document.querySelector("body").style.display = "none";
+//   alert(
+//     "This is an app for players of Marvel vs. Capcom Infinite that shows character moves and combos! This site is formatted for mobile"
+//   );
+// })();
 
 function setCharacter(sel) {
   characterSelected = sel.options[sel.selectedIndex].text;
   return characterSelected;
 }
 
-document.querySelector("#dropD").addEventListener("submit", function(event) {
+document.querySelector("#dropD").addEventListener("submit", event => {
   event.preventDefault();
   renderData();
 });
