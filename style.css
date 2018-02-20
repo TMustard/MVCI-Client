@@ -53,3 +53,12 @@ ul {
   padding: .5rem;
   text-align: left;
 }
+
+
+#dropd,
+.add: hover {
+  color: black;
+  border-style: solid;
+  border-width: 10px;
+  border-color: black;
+}
