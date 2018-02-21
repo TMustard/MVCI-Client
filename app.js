@@ -1,5 +1,5 @@
-// const apiURL = "https://fathomless-chamber-33616.herokuapp.com/";
-const apiURL = "http://localhost:8000";
+const apiURL = "https://fathomless-chamber-33616.herokuapp.com/";
+// const apiURL = "http://localhost:8000";
 var moveData;
 var comboData;
 var characterData = [];
@@ -20,12 +20,9 @@ fetch(`${apiURL}/combos`)
     }
   });
 
-(function startPage() {
-  // document.querySelector("body").style.display = "none";
-  alert(
+alert(
     "This is an app for players of Marvel vs. Capcom Infinite that shows character moves and combos! This site is formatted for mobile. Also, the data is incomplete at the moment. Select Nova for an example of how a complete list of moves and combos would look."
-  );
-})();
+
 
 function setCharacter(sel) {
   characterSelected = sel.options[sel.selectedIndex].text;
@@ -71,11 +68,3 @@ const addButton = document.querySelector(".add");
 addButton.addEventListener("click", function() {
   document.querySelector(".add-combo-forms").style.display = "inline";
 });
-
-// document.querySelector("#user-inputs").addEventListener("submit", function(event){
-//   event.preventDefault();
-//   const messageData = new FormData(event.target);
-//   const objectToSend = {
-//     "Submitted by:"
-//
-// })
