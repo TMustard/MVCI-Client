@@ -5,13 +5,13 @@ var comboData;
 var characterData = [];
 var characterSelected;
 
-fetch(`${apiURL}/moves`)
+fetch(`${apiURL}moves`)
   .then(response => response.json())
   .then(response => {
     moveData = response.moves;
   });
 
-fetch(`${apiURL}/combos`)
+fetch(`${apiURL}combos`)
   .then(response => response.json())
   .then(response => {
     comboData = response.combos;
