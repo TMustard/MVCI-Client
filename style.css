@@ -42,7 +42,7 @@ ul {
 }
 
 #dropD,
-.add {
+.add, .about {
   background-color: hsla(300, 100%, 100%, 0.7);
   border-color: black;
   border-style: solid;
@@ -66,5 +66,8 @@ ul {
 .coming-soon{
   color: white;
   text-shadow: 0px 0px 4px black;
+}
 
+.aboutP {
+  display: none;
 }
