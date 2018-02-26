@@ -19,7 +19,6 @@ fetch(`${apiURL}/combos`)
       characterData.push(Object.assign({}, comboData[i], moveData[i]));
     }
   });
-// let name;
 
 function showInfo() {
   if ((document.querySelector(".aboutP").style.display = "none")) {
