@@ -24,7 +24,7 @@ fetch(`${apiURL}/combos`)
 function showInfo() {
   if ((document.querySelector(".aboutP").style.display = "none")) {
     document.querySelector(".aboutP").style.display = "inline";
-  } else {
+  } else if ((document.querySelector(".aboutP").style.display = "inline")) {
     document.querySelector(".aboutP").style.display = "none";
   }
 }

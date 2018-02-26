@@ -1,17 +1,12 @@
 
 
 body {
-  color: black;
-  /* background-color: rgb(214, 229, 255); */
-  background: url(f6545afb95853c4c1b1f4213a7354a41.jpg);
-  height: 100%;
-  overflow: scroll;
-  /* -webkit-overflow-scrolling: touch; */
-
+  background: linear-gradient(262deg, #7a6d6d, #2439aa, #100404);
+  background-size: 200% 200%;
 }
 
 h1 {
-  background-color: hsla(300, 100%, 100%, 0.6);
+  background-color: hsla(300, 100%, 100%, 0.5);
   font-family: "Bungee Inline", cursive;
   border-radius: 5%;
   border-style: solid;
@@ -30,7 +25,7 @@ h2 {
 }
 
 ul {
-  background-color: hsla(300, 100%, 100%, 0.7);
+  background-color: hsla(300, 100%, 100%, 0.5);
   border-radius: 5%;
   border-style: solid;
   border-color: rgb(0, 0, 200)
@@ -41,9 +36,14 @@ ul {
   padding: 2rem;
 }
 
+li {
+  font-family: sans-serif;
+  padding: .3rem;
+}
+
 #dropD,
 .add, .about, .aboutP {
-  background-color: hsla(300, 100%, 100%, 0.7);
+  background-color: hsla(300, 100%, 100%, 0.6);
   border-color: black;
   border-style: solid;
   border-top-width: 2px;
@@ -53,10 +53,16 @@ ul {
   padding: .5rem;
   }
 
+  .about {
+    max-width: 6rem;
+    max-height: 3rem;
+    position: relative;
+  }
+
 .pContainer {
   display: flex;
   flex-flow: column;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 1rem;
 }
 
