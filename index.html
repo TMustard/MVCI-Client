@@ -10,8 +10,10 @@
 </head>
 <body>
   <h1>MVC: I Character Guide</h1>
-  <button class="about" onclick="showInfo">About</button>
-  <p class="aboutP">"This is an app for players of Marvel vs. Capcom Infinite that shows character moves and combos! This site is formatted for mobile. Also, the data is incomplete at the moment. Select Nova for an example of how a complete list of moves and combos would look."</p>
+  <div class="pContainer">
+  <button class="about" onclick="showInfo(this)" >About</button>
+  <p class="aboutP" style="display:none;">This is an app for players of Marvel vs. Capcom Infinite that shows character moves and combos! This site is formatted for mobile. Also, the data is incomplete at the moment. Select Nova for an example of how a complete list of moves and combos would look.</p>
+  </div>
   <form action="#" id="dropD">
       <select name="occasion-dropdown" id="drop" onchange="setCharacter(this)">
         <option value="value0" selected>Click to Select a Character</option>
@@ -58,10 +60,7 @@
       <input type="submit" name="" value="submit">
     </form>
   </div>
-
-  <!-- <button>
-    <a href="/index.html" class="back">Back</a>
-  </button> -->
+<!-- <embed src="song.m4a"> -->
 <script src= "app.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 const apiURL = "https://fathomless-chamber-33616.herokuapp.com";
 // const apiURL = "http://localhost:8000";
 var moveData = [];
-var comboData;
+var comboData = [];
 var characterData = [];
 var characterSelected;
 
@@ -19,6 +19,7 @@ fetch(`${apiURL}/combos`)
       characterData.push(Object.assign({}, comboData[i], moveData[i]));
     }
   });
+// let name;
 
 function showInfo() {
   if ((document.querySelector(".aboutP").style.display = "none")) {

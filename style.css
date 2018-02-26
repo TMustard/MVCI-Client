@@ -42,7 +42,7 @@ ul {
 }
 
 #dropD,
-.add, .about {
+.add, .about, .aboutP {
   background-color: hsla(300, 100%, 100%, 0.7);
   border-color: black;
   border-style: solid;
@@ -51,16 +51,13 @@ ul {
   border-bottom-width: 4px;
   border-left-width: 4px;
   padding: .5rem;
-  text-align: left;
-}
+  }
 
-
-#dropd,
-.add: hover {
-  color: black;
-  border-style: solid;
-  border-width: 10px;
-  border-color: black;
+.pContainer {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  margin: 1rem;
 }
 
 .coming-soon{
@@ -68,6 +65,6 @@ ul {
   text-shadow: 0px 0px 4px black;
 }
 
-.aboutP {
+/* embed {
   display: none;
-}
+} */
